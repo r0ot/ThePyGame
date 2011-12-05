@@ -2,3 +2,11 @@ A game project written in Python
 
 3D Renderer - Python-Ogre
 Physics Engine - ODE
+
+To run, you need:
+Python 2.7
+
+Modules you need:
+PyGame
+Python-Ogre
+ODE
