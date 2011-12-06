@@ -219,7 +219,7 @@ class PyGameOGREApp():
         orientations = []
         for i in self.staticObjs:
             try:
-                positions.append(i[0].getPosition())
+                #positions.append(i[0].getPosition())
                 orientations.append(i[0].getRotation())
             except:
                 pass
@@ -231,7 +231,7 @@ class PyGameOGREApp():
 
         for i in range(len(self.staticObjs)):
             try:
-                self.staticObjs[i][0].setPosition(positions[i])
+                #self.staticObjs[i][0].setPosition(positions[i])
                 self.staticObjs[i][0].setRotation(orientations[i])
             except:
                 pass
@@ -420,6 +420,9 @@ class PyGameOGREApp():
                     body.setPosition(self.selected.getPosition())
                     if self.selectedShape == "cube":
                         self.staticObjs.append((body, geom))
+                        j = ode.BallJoint(self.world)
+                        j.attach(body, ode.environment)
+                        j.setAnchor(body.getPosition())
                     
                     self.selected.showBoundingBox(False)
                 self.selected = None
