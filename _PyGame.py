@@ -215,10 +215,26 @@ class PyGameOGREApp():
         
         n = 2
 
+        positions = []
+        orientations = []
+        for i in self.staticObjs:
+            try:
+                positions.append(i[0].getPosition())
+                orientations.append(i[0].getRotation())
+            except:
+                pass
+
         for i in range(n):
             self.space.collide((self.world,self.contactgroup), self.near_callback)
             self.world.step(self.dt)
             self.contactgroup.empty()
+
+        for i in range(len(self.staticObjs)):
+            try:
+                self.staticObjs[i][0].setPosition(positions[i])
+                self.staticObjs[i][0].setRotation(orientations[i])
+            except:
+                pass
 
         self.lasstime = time.time()
 
@@ -246,6 +262,7 @@ class PyGameOGREApp():
         self.distance = 1000
         self.rayOn = False
         self.rayBody = None
+        self.staticObjs = []
 
         #Pygame
         #pygame.display.update()
@@ -401,6 +418,8 @@ class PyGameOGREApp():
                     self.bodies.append(body)
                     self.geoms.append(geom)
                     body.setPosition(self.selected.getPosition())
+                    if self.selectedShape == "cube":
+                        self.staticObjs.append((body, geom))
                     
                     self.selected.showBoundingBox(False)
                 self.selected = None
