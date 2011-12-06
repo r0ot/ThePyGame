@@ -16,6 +16,25 @@ NUMSTARS = 150
 white = 255, 240, 200
 black = 20, 20, 40
 
+def distance(pos1, pos2):
+    try:
+        hyp1 = math.sqrt(pow((pos1.x-pos2.x),2) + pow((pos1.z-pos2.z),2))
+        distance = math.sqrt(pow(hyp1,2) + pow((pos1.y-pos2.y),2))
+        return distance
+    except:
+        hyp1 = math.sqrt(pow((pos1[0]-pos2[0]),2) + pow((pos1[2]-pos2[2]),2))
+        distance = math.sqrt(pow(hyp1,2) + pow((pos1[1]-pos2[1]),2))
+        return distance
+
+def sort(l):
+    lowest = l[0][1]
+    index = 0
+    for i in range(len(l)):
+        if l[i][1] < lowest:
+            index = i
+            lowest = l[i][1]
+    return index
+    
 class PyGameOGREApp():
     "Provides a base for an application using PyGame and PyOgre"
     def __init__(self, width=WINSIZE[0], height=WINSIZE[1], fullscreen=False):
@@ -387,10 +406,10 @@ class PyGameOGREApp():
                 else:
                     sq = MyRaySceneQueryListener()
                     result = sq.getCoords(self, 400, 300)
-                    #print result.getName()
                     if len(result) > 0:
-                        for item in result:
-                            print item
+                        index = sort(result)
+                        ent = result[index][0]
+                        print ent.getName()
                         
             elif event.type is pygame.KEYDOWN and event.key is pygame.K_i:
                 pygame.event.set_grab(not pygame.event.get_grab())
@@ -506,14 +525,17 @@ class MyRaySceneQueryListener(ogre.RaySceneQueryListener):
         self.mouseRay = app.camera.getCameraToViewportRay(pos_w, pos_h)
         self.raySceneQuery = app.sceneManager.createRayQuery(ogre.Ray())
         self.raySceneQuery.setRay(self.mouseRay)
-        self.raySceneQuery.setSortByDistance(True)
+        self.raySceneQuery.setSortByDistance(False)
+        self.result_list = []
         self.raySceneQuery.execute(self)
+        return self.result_list
 
     def queryResult(self, entity, distance):
         "No clue what this does"
-        print ""
-        print entity.getName(), self.mouseRay.getPoint(distance)
-        print ""
+        if entity.getName() != "plane":
+            #self.result_list.append((entity, self.mouseRay.getPoint(distance)))
+            self.result_list.append((entity, distance))
+        return True
 
 class MouseCursor:
     "CROSSHAIRS! :D"
