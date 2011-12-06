@@ -178,7 +178,7 @@ class PyGameOGREApp():
 
         #msPos = pygame.mouse.get_pos()
         #self.mouseCursor.updatePosition(msPos[0], msPos[1])
-        self.mouseCursor.updatePosition(400, 300)
+        self.mouseCursor.updatePosition(400-7.5, 300-7.5)
         
         self.camera.setPosition(self.cameraBody.getPosition())
         for i in range(len(self.bodies)):
