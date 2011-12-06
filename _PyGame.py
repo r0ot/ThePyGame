@@ -140,6 +140,12 @@ class PyGameOGREApp():
         objcount = 0
         self.lasttime = time.time()
 
+        #CrossHairs Setup
+        self.mouseCursor = MouseCursor()
+        self.mouseCursor.setImage("target.png")
+        self.mouseCursor.setVisible(True)
+        self.mouseCursor.setWindowDimensions(800, 600)
+
         #Sexy Shadows
         self.sceneManager.setShadowTechnique(ogre.SHADOWTYPE_STENCIL_ADDITIVE)
         #self.sceneManager.setShadowTechnique(ogre.SHADOWTYPE_TEXTURE_MODULATIVE)
@@ -150,80 +156,8 @@ class PyGameOGREApp():
             ## Use 512x512 texture in GL since we can't go higher than the window res
             self.sceneManager.setShadowTextureSettings(512, 2)
         self.sceneManager.setShadowColour(ogre.ColourValue(0.6, 0.6, 0.6))
-
-        #Draw crosshairs
-        #Size of Screen: [800, 600]
-        #CEGUI
-##        CEGUI.SchemeManager.getSingleton().create("TaharezLook.scheme")
-##        myImageWindow = CEGUI.WindowManager.getSingleton().createWindow("TaharezLook/StaticImage","MainWindow")
-##        myImageWindow.setPosition(CEGUI.UVector2(CEGUI.UDim(1,0), CEGUI.UDim(1,0)))
-##        myImageWindow.setSize(CEGUI.UVector2(CEGUI.UDim(0,800),CEGUI.UDim(0,600)))
-##        myImageWindow.setProperty("Image","set:TaharezLook image:Crosshairs")
-##        CEGUI.System.getSingleton().setGUISheet(myImageWindow)
-##        myImageWindow3 = CEGUI.WindowManager.getSingleton().createWindow("TaharezLook/StaticImage","PrettyWindow")
-##        myImageWindow3.setPosition(CEGUI.UVector2(CEGUI.UDim(0.5,-3.5), CEGUI.UDim(0.5,-10)))
-##        myImageWindow3.setSize(CEGUI.UVector2(CEGUI.UDim(0,7),CEGUI.UDim(0,20)))
-##        myImageWindow3.setProperty("Image","set:TaharezLook image:Crosshairs")
-##        CEGUI.System.getSingleton().getGUISheet().addChildWindow(myImageWindow3)
-##        myImageWindow2 = CEGUI.WindowManager.getSingleton().createWindow("TaharezLook/StaticImage","PrettyWindow2")
-##        myImageWindow2.setPosition(CEGUI.UVector2(CEGUI.UDim(0.5,-10), CEGUI.UDim(0.5,-3.5)))
-##        myImageWindow2.setSize(CEGUI.UVector2(CEGUI.UDim(0,20),CEGUI.UDim(0,7)))
-##        myImageWindow2.setProperty("Image","set:TaharezLook image:Crosshairs")
-##        CEGUI.System.getSingleton().getGUISheet().addChildWindow(myImageWindow2)
-        
-        #gui = CEGUI.System.getSingleton().getGUISheet()
-        #gui.addChildWindow(myImageWindow)
         
     def near_callback(self, args, geom1, geom2):
-##        try:
-##            if geom1.getBody().name == "ray":
-##                print geom2.name
-##                self.rayOn = False
-##                num = -1
-##                for i in self.geoms:
-##                    if i.name == geom2.name:
-##                        num = i
-##                if not num == -1:
-##                    print "You Win :D"
-##                    self.selected = self.sceneNodes[num+1]
-##                    self.selection = True
-##                    self.selectedEnt = self.entities[num+1]
-##                    if str(geom2)[9] == 'B':
-##                        self.selectedShape = "cube"
-##                    elif str(geom2)[9] == 'S':
-##                        self.selectedShape = "sphere"
-##                else:
-##                    print "You Fail :("
-##                geom1.getBody().disable()
-##                geom1.disable()
-##                #self.geoms.remove(geom1)
-##                return
-##        except:
-##            try:
-##                if geom2.getBody().name == "ray":
-##                    print geom1.name
-##                    self.rayOn = False
-##                    num = -1
-##                    for i in self.geoms:
-##                        if i.name == geom2.name:
-##                            num = i
-##                    if not num == -1:
-##                        print "You Win :D"
-##                        self.selected = self.sceneNodes[num+1]
-##                        self.selection = True
-##                        self.selectedEnt = self.entities[num+1]
-##                        if str(geom1)[9] == 'B':
-##                            self.selectedShape = "cube"
-##                        elif str(geom1)[9] == 'S':
-##                            self.selectedShape = "sphere"
-##                    else:
-##                        print "You Fail :("
-##                    geom2.getBody().disable()
-##                    geom2.disable()
-##                    #self.geoms.remove(geom2)
-##                    return
-##            except:
-##                st = "blah"
         contacts = ode.collide(geom1, geom2)
         self.world,self.contactgroup = args
         for c in contacts:
@@ -241,6 +175,10 @@ class PyGameOGREApp():
 ##            print self.rayBody.getPosition()
 ##        except:
 ##            pass
+
+        #msPos = pygame.mouse.get_pos()
+        #self.mouseCursor.updatePosition(msPos[0], msPos[1])
+        self.mouseCursor.updatePosition(400, 300)
         
         self.camera.setPosition(self.cameraBody.getPosition())
         for i in range(len(self.bodies)):
@@ -340,16 +278,6 @@ class PyGameOGREApp():
                 return False
             elif event.type is pygame.KEYDOWN and event.key is pygame.K_ESCAPE:
                 return False
-##            elif event.type is  pygame.MOUSEBUTTONDOWN and event.button is 1:
-##                mousePos = pygame.mouse.get_pos()
-##                mouseRay = self.camera.getCameraToViewportRay(mousePos[0] / float(800),
-##                                                              mousePos[1] / float(600))
-##                self.raySceneQuery.setRay(mouseRay)
-##                self.raySceneQuery.setSortByDistance(True)
-##                result = self.raySceneQuery.execute()
-##                if len(result) > 0:
-##                    for item in result:
-##                        print item
             
             elif event.type is pygame.KEYDOWN and event.key is pygame.K_l:
                 if not self.selection:
@@ -440,28 +368,12 @@ class PyGameOGREApp():
                     body.setLinearVel(vect)
 
                 else:
-                    mouseRay = self.camera.getCameraToViewportRay(400 / 800.0, 300 / 600.0)
-                    self.raySceneQuery.setRay(mouseRay)
-                    self.raySceneQuery.setSortByDistance(True)
-                    result = self.raySceneQuery.execute()
-##                else:
-##                    if not self.rayOn:
-##                        self.rayOn = True
-##                        self.rayBody = ode.Body(self.world)
-##                        M = ode.Mass()
-##                        M.setSphere(2, 1)
-##                        geom = ode.GeomSphere(self.space, 1)
-##                        self.rayBody.setMass(M)
-##                        geom.setBody(self.rayBody)
-##                        self.rayBody.name = "ray"
-##                        self.rayBody.setPosition(self.camera.getPosition())
-##                        self.geoms.append(geom)
-##
-##                        vect = ogre.Vector3(0, 0, 0)
-##                        vect.z -= .5
-##                        vect = self.camera.getOrientation() * vect
-##                        vect *= 200
-##                        self.rayBody.setLinearVel(vect)
+                    sq = MyRaySceneQueryListener()
+                    result = sq.getCoords(self, 400, 300)
+                    #print result.getName()
+                    if len(result) > 0:
+                        for item in result:
+                            print item
                         
             elif event.type is pygame.KEYDOWN and event.key is pygame.K_i:
                 pygame.event.set_grab(not pygame.event.get_grab())
@@ -556,6 +468,74 @@ class PyGameOGREApp():
             self.cameraBody.setLinearVel(transVector)
         
         return True
+
+class MyRaySceneQueryListener(ogre.RaySceneQueryListener):
+    """To get raySceneQueries to work
+        To use, call MyRaySceneQueryListener.getCoords(self, self.mouse)"""
+    def __init__(self):
+        "Init"
+        super(MyRaySceneQueryListener, self).__init__()
+
+    def getCoords(self, app, x, y):
+        "Query Scene"
+        pos_w = float(x) / 800.0
+        pos_h = float(y) / 600.0
+
+        self.mouseRay = app.camera.getCameraToViewportRay(pos_w, pos_h)
+        self.raySceneQuery = app.sceneManager.createRayQuery(ogre.Ray())
+        self.raySceneQuery.setRay(self.mouseRay)
+        self.raySceneQuery.setSortByDistance(True)
+        self.raySceneQuery.execute(self)
+
+    def queryResult(self, entity, distance):
+        "No clue what this does"
+        print ""
+        print entity.getName(), self.mouseRay.getPoint(distance)
+        print ""
+
+class MouseCursor:
+    "CROSSHAIRS! :D"
+    def __init__(self):
+        self.mMaterial = ogre.MaterialManager.getSingleton().create("MouseCursor/default", "General")
+        ##(OverlayContainer*)
+        self.mCursorContainer =  ogre.OverlayManager.getSingletonPtr().createOverlayElement("Panel", "MouseCursor")
+        self.mCursorContainer.setMaterialName(self.mMaterial.getName())
+        self.mCursorContainer.setPosition(0, 0)
+        self.mGuiOverlay = ogre.OverlayManager.getSingletonPtr().create("MouseCursor")
+        self.mGuiOverlay.setZOrder(649)
+        self.mGuiOverlay.add2D(self.mCursorContainer)
+        self.mGuiOverlay.show()
+        self.mWindowWidth  = 1
+        self.mWindowHeight = 1
+    def setImage(self,filename):
+        self.mTexture = ogre.TextureManager.getSingleton().load(filename, "General")
+        matPass = self.mMaterial.getTechnique(0).getPass(0)
+        if matPass.getNumTextureUnitStates():
+            pTexState = matPass.getTextureUnitState(0)
+        else:
+            pTexState = matPass.createTextureUnitState( self.mTexture.getName() )
+        pTexState.setTextureAddressingMode(ogre.TextureUnitState.TAM_CLAMP)
+        matPass.setSceneBlending(ogre.SBT_TRANSPARENT_ALPHA)
+    def setWindowDimensions(self, width, height):
+        self.mWindowWidth  = width
+        self.mWindowHeight = height
+        if self.mWindowWidth==0:
+            self.mWindowWidth=1
+        if self.mWindowHeight==0:
+            self.mWindowHeight=1
+        dx = self.mTexture.getWidth()  / float(self.mWindowWidth  )
+        dy = self.mTexture.getHeight() / float(self. mWindowHeight)
+        self.mCursorContainer.setWidth(dx)
+        self.mCursorContainer.setHeight(dy)
+    def setVisible(self,visible):
+        if(visible):
+            self.mCursorContainer.show()
+        else:
+            self.mCursorContainer.hide()
+    def updatePosition(self, x, y):
+        rx = float(x) / float(self.mWindowWidth)
+        ry = float(y) / float(self.mWindowHeight)
+        self.mCursorContainer.setPosition(ogre.Math.Clamp(rx, 0.0, 1.0), ogre.Math.Clamp(ry, 0.0, 1.0))
   
 # Instantiate and run!
 app = PyGameOGREApp()
