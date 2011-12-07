@@ -16,6 +16,25 @@ NUMSTARS = 150
 white = 255, 240, 200
 black = 20, 20, 40
 
+def distance(pos1, pos2):
+    try:
+        hyp1 = math.sqrt(pow((pos1.x-pos2.x),2) + pow((pos1.z-pos2.z),2))
+        distance = math.sqrt(pow(hyp1,2) + pow((pos1.y-pos2.y),2))
+        return distance
+    except:
+        hyp1 = math.sqrt(pow((pos1[0]-pos2[0]),2) + pow((pos1[2]-pos2[2]),2))
+        distance = math.sqrt(pow(hyp1,2) + pow((pos1[1]-pos2[1]),2))
+        return distance
+
+def sort(l):
+    lowest = l[0][1]
+    index = 0
+    for i in range(len(l)):
+        if l[i][1] < lowest:
+            index = i
+            lowest = l[i][1]
+    return index
+    
 class PyGameOGREApp():
     "Provides a base for an application using PyGame and PyOgre"
     def __init__(self, width=WINSIZE[0], height=WINSIZE[1], fullscreen=False):
@@ -259,6 +278,7 @@ class PyGameOGREApp():
         self.selection = False
         self.selectedEnt = None
         self.selectedShape = ""
+        self.newSelection = False
         self.distance = 1000
         self.rayOn = False
         self.rayBody = None
@@ -387,10 +407,16 @@ class PyGameOGREApp():
                 else:
                     sq = MyRaySceneQueryListener()
                     result = sq.getCoords(self, 400, 300)
-                    #print result.getName()
                     if len(result) > 0:
-                        for item in result:
-                            print item
+                        index = sort(result)
+                        ent = result[index][0]
+                        print ent.getName()
+                        sn = ent.getParentSceneNode()
+                        self.selection = True
+                        self.selected = sn
+                        self.selectedEnt = ent
+                        self.newSelection = False
+                        self.selectedShape = "old"
                         
             elif event.type is pygame.KEYDOWN and event.key is pygame.K_i:
                 pygame.event.set_grab(not pygame.event.get_grab())
@@ -402,33 +428,36 @@ class PyGameOGREApp():
                     self.cameraBody.setLinearVel(jumpVec)
             elif event.type is pygame.KEYDOWN and event.key is pygame.K_r:
                 if not self.selectedShape == "light":
-                    body = ode.Body(self.world)
-                    M = ode.Mass()
-                    if self.selectedShape == "sphere":
-                        M.setSphere(5, self.selectedEnt.getBoundingBox().getHalfSize().x)
-                        geom = ode.GeomSphere(self.space, self.selectedEnt.getBoundingBox().getHalfSize().x)
-                        geom.name = "sphere" + str(self.sphereCount)
-                    elif self.selectedShape == "cube":
-                        size = self.entities[len(self.entities)-1].getBoundingBox().getSize().x
-                        M.setBox(100, size, size, size)
-                        geom = ode.GeomBox(self.space, lengths=(size, size, size))
-                        geom.name = "cube" + str(self.cubeCount)
-                    body.setMass(M)
-                    geom.setBody(body)
-                    self.bodies.append(body)
-                    self.geoms.append(geom)
-                    body.setPosition(self.selected.getPosition())
-                    if self.selectedShape == "cube":
-                        self.staticObjs.append((body, geom))
-                        j = ode.BallJoint(self.world)
-                        j.attach(body, ode.environment)
-                        j.setAnchor(body.getPosition())
-                    
+                    if self.newSelection:
+                        body = ode.Body(self.world)
+                        M = ode.Mass()
+                        if self.selectedShape == "sphere":
+                            M.setSphere(5, self.selectedEnt.getBoundingBox().getHalfSize().x)
+                            geom = ode.GeomSphere(self.space, self.selectedEnt.getBoundingBox().getHalfSize().x)
+                            geom.name = "sphere" + str(self.sphereCount)
+                        elif self.selectedShape == "cube":
+                            size = self.entities[len(self.entities)-1].getBoundingBox().getSize().x
+                            M.setBox(100, size, size, size)
+                            geom = ode.GeomBox(self.space, lengths=(size, size, size))
+                            geom.name = "cube" + str(self.cubeCount)
+                        body.setMass(M)
+                        geom.setBody(body)
+                        self.bodies.append(body)
+                        self.geoms.append(geom)
+                        body.setPosition(self.selected.getPosition())
+                        if self.selectedShape == "cube":
+                            self.staticObjs.append((body, geom))
+                            j = ode.BallJoint(self.world)
+                            j.attach(body, ode.environment)
+                            j.setAnchor(body.getPosition())
+                    #else:
+                        
                     self.selected.showBoundingBox(False)
                 self.selected = None
                 self.selection = False
                 self.distance = 1000
                 self.selectedShape = ""
+                self.newSelection = False
                 
             elif event.type is pygame.KEYDOWN and event.key is pygame.K_1:
                 if not self.selection:
@@ -447,6 +476,7 @@ class PyGameOGREApp():
                     self.selection = True
                     self.selectedEnt = self.entities[len(self.entities)-1]
                     self.selectedShape = "cube"
+                    self.newSelection = True
                 
             elif event.type is pygame.KEYDOWN and event.key is pygame.K_2:
                 if not self.selection:
@@ -465,6 +495,7 @@ class PyGameOGREApp():
                     self.selection = True
                     self.selectedEnt = self.entities[len(self.entities)-1]
                     self.selectedShape = "sphere"
+                    self.newSelection = True
 
         pressed_keys = pygame.key.get_pressed()
 
@@ -506,14 +537,17 @@ class MyRaySceneQueryListener(ogre.RaySceneQueryListener):
         self.mouseRay = app.camera.getCameraToViewportRay(pos_w, pos_h)
         self.raySceneQuery = app.sceneManager.createRayQuery(ogre.Ray())
         self.raySceneQuery.setRay(self.mouseRay)
-        self.raySceneQuery.setSortByDistance(True)
+        self.raySceneQuery.setSortByDistance(False)
+        self.result_list = []
         self.raySceneQuery.execute(self)
+        return self.result_list
 
     def queryResult(self, entity, distance):
         "No clue what this does"
-        print ""
-        print entity.getName(), self.mouseRay.getPoint(distance)
-        print ""
+        if entity.getName() != "plane":
+            #self.result_list.append((entity, self.mouseRay.getPoint(distance)))
+            self.result_list.append((entity, distance))
+        return True
 
 class MouseCursor:
     "CROSSHAIRS! :D"
