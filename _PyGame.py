@@ -411,12 +411,15 @@ class PyGameOGREApp():
                         index = sort(result)
                         ent = result[index][0]
                         print ent.getName()
+<<<<<<< HEAD
                         sn = ent.getParentSceneNode()
                         self.selection = True
                         self.selected = sn
                         self.selectedEnt = ent
                         self.newSelection = False
                         self.selectedShape = "old"
+=======
+>>>>>>> e4bcc604bcaaabb5998054d57eb205a341a29060
                         
             elif event.type is pygame.KEYDOWN and event.key is pygame.K_i:
                 pygame.event.set_grab(not pygame.event.get_grab())

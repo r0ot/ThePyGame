@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 17:04:44: Creating resource group General
 17:04:44: Creating resource group Internal
 17:04:44: Creating resource group Autodetect
@@ -416,3 +417,422 @@ OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource HeatVision.cg in
 17:04:53: Plugin successfully uninstalled
 17:04:53: Unloading library Plugins\RenderSystem_GL.dll
 17:04:53: Unregistering ResourceManager for type Material
+=======
+12:08:05: Creating resource group General
+12:08:05: Creating resource group Internal
+12:08:05: Creating resource group Autodetect
+12:08:05: SceneManagerFactory for type 'DefaultSceneManager' registered.
+12:08:05: Registering ResourceManager for type Material
+12:08:05: Registering ResourceManager for type Mesh
+12:08:05: Registering ResourceManager for type Skeleton
+12:08:05: MovableObjectFactory for type 'ParticleSystem' registered.
+12:08:05: OverlayElementFactory for type Panel registered.
+12:08:05: OverlayElementFactory for type BorderPanel registered.
+12:08:05: OverlayElementFactory for type TextArea registered.
+12:08:05: Registering ResourceManager for type Font
+12:08:05: ArchiveFactory for archive type FileSystem registered.
+12:08:05: ArchiveFactory for archive type Zip registered.
+12:08:05: DDS codec registering
+12:08:05: FreeImage version: 3.13.1
+12:08:05: This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
+12:08:05: Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2,pfm,pct,pict,pic,bay,bmq,cr2,crw,cs1,dc2,dcr,dng,erf,fff,hdr,k25,kdc,mdc,mos,mrw,nef,orf,pef,pxn,raf,raw,rdc,sr2,srf,arw,3fr,cine,ia,kc2,mef,nrw,qtk,rw2,sti,drf,dsc,ptx,cap,iiq,rwz
+12:08:05: Registering ResourceManager for type HighLevelGpuProgram
+12:08:05: Registering ResourceManager for type Compositor
+12:08:05: MovableObjectFactory for type 'Entity' registered.
+12:08:05: MovableObjectFactory for type 'Light' registered.
+12:08:05: MovableObjectFactory for type 'BillboardSet' registered.
+12:08:05: MovableObjectFactory for type 'ManualObject' registered.
+12:08:05: MovableObjectFactory for type 'BillboardChain' registered.
+12:08:05: MovableObjectFactory for type 'RibbonTrail' registered.
+12:08:05: Loading library Plugins\RenderSystem_GL.dll
+12:08:05: Installing plugin: GL RenderSystem
+12:08:05: OpenGL Rendering Subsystem created.
+12:08:05: Plugin successfully installed
+12:08:05: Loading library Plugins\RenderSystem_Direct3D9.dll
+12:08:05: Installing plugin: D3D9 RenderSystem
+12:08:05: D3D9 : Direct3D9 Rendering Subsystem created.
+12:08:05: D3D9: Driver Detection Starts
+12:08:05: D3D9: Driver Detection Ends
+12:08:05: Plugin successfully installed
+12:08:05: Loading library Plugins\Plugin_ParticleFX.dll
+12:08:05: Installing plugin: ParticleFX
+12:08:05: Particle Emitter Type 'Point' registered
+12:08:05: Particle Emitter Type 'Box' registered
+12:08:05: Particle Emitter Type 'Ellipsoid' registered
+12:08:05: Particle Emitter Type 'Cylinder' registered
+12:08:05: Particle Emitter Type 'Ring' registered
+12:08:05: Particle Emitter Type 'HollowEllipsoid' registered
+12:08:05: Particle Affector Type 'LinearForce' registered
+12:08:05: Particle Affector Type 'ColourFader' registered
+12:08:05: Particle Affector Type 'ColourFader2' registered
+12:08:05: Particle Affector Type 'ColourImage' registered
+12:08:05: Particle Affector Type 'ColourInterpolator' registered
+12:08:05: Particle Affector Type 'Scaler' registered
+12:08:05: Particle Affector Type 'Rotator' registered
+12:08:05: Particle Affector Type 'DirectionRandomiser' registered
+12:08:05: Particle Affector Type 'DeflectorPlane' registered
+12:08:05: Plugin successfully installed
+12:08:05: Loading library Plugins\Plugin_BSPSceneManager.dll
+12:08:05: Installing plugin: BSP Scene Manager
+12:08:05: Plugin successfully installed
+12:08:05: Loading library Plugins\Plugin_OctreeSceneManager.dll
+12:08:05: Installing plugin: Octree & Terrain Scene Manager
+12:08:05: Plugin successfully installed
+12:08:05: Loading library Plugins\Plugin_CgProgramManager.dll
+12:08:05: Installing plugin: Cg Program Manager
+12:08:05: Plugin successfully installed
+12:08:05: Loading library Plugins\Plugin_OctreeZone.dll
+12:08:05: Installing plugin: Octree Zone Factory
+12:08:05: Plugin successfully installed
+12:08:05: Loading library Plugins\Plugin_PCZSceneManager.dll
+12:08:05: Installing plugin: Portal Connected Zone Scene Manager
+12:08:05: PCZone Factory Type 'ZoneType_Default' registered
+12:08:05: Plugin successfully installed
+12:08:05: *-*-* OGRE Initialising
+12:08:05: *-*-* Version 1.7.2 (Cthugha)
+12:08:05: D3D9 : RenderSystem Option: Allow NVPerfHUD = No
+12:08:05: D3D9 : RenderSystem Option: FSAA = 0
+12:08:05: D3D9 : RenderSystem Option: Floating-point mode = Fastest
+12:08:05: D3D9 : RenderSystem Option: Full Screen = No
+12:08:05: D3D9 : RenderSystem Option: Rendering Device = Monitor-1-Intel(R)  G35 Express Chipset Family (Microsoft Corporation - WDDM 1.1)
+12:08:05: D3D9 : RenderSystem Option: Resource Creation Policy = Create on all devices
+12:08:05: D3D9 : RenderSystem Option: VSync = No
+12:08:05: D3D9 : RenderSystem Option: VSync Interval = 1
+12:08:05: D3D9 : RenderSystem Option: Video Mode = 800 x 600 @ 32-bit colour
+12:08:05: D3D9 : RenderSystem Option: sRGB Gamma Conversion = No
+12:08:06: CPU Identifier & Features
+12:08:06: -------------------------
+12:08:06:  *   CPU ID: GenuineIntel: Intel(R) Core(TM)2 Duo CPU     E7400  @ 2.80GHz
+12:08:06:  *      SSE: yes
+12:08:06:  *     SSE2: yes
+12:08:06:  *     SSE3: yes
+12:08:06:  *      MMX: yes
+12:08:06:  *   MMXEXT: yes
+12:08:06:  *    3DNOW: no
+12:08:06:  * 3DNOWEXT: no
+12:08:06:  *     CMOV: yes
+12:08:06:  *      TSC: yes
+12:08:06:  *      FPU: yes
+12:08:06:  *      PRO: yes
+12:08:06:  *       HT: no
+12:08:06: -------------------------
+12:08:06: D3D9 : Subsystem Initialising
+12:08:06: Registering ResourceManager for type Texture
+12:08:06: Registering ResourceManager for type GpuProgram
+12:08:06: ***************************************
+12:08:06: *** D3D9 : Subsystem Initialised OK ***
+12:08:06: ***************************************
+12:08:06: D3D9RenderSystem::_createRenderWindow "PyOgre through PyGame", 800x600 windowed  miscParams: externalWindowHandle=983912 
+12:08:06: D3D9 : Created D3D9 Rendering Window 'PyOgre through PyGame' : 800x600, 32bpp
+12:08:06: D3D9 : WARNING - disabling VSync in windowed mode can cause timing issues at lower frame rates, turn VSync on if you observe this problem.
+12:08:06: D3D9: Vertex texture format supported - PF_L8
+12:08:06: D3D9: Vertex texture format supported - PF_L16
+12:08:06: D3D9: Vertex texture format supported - PF_A8
+12:08:06: D3D9: Vertex texture format supported - PF_A4L4
+12:08:06: D3D9: Vertex texture format supported - PF_BYTE_LA
+12:08:06: D3D9: Vertex texture format supported - PF_R5G6B5
+12:08:06: D3D9: Vertex texture format supported - PF_B5G6R5
+12:08:06: D3D9: Vertex texture format supported - PF_A4R4G4B4
+12:08:06: D3D9: Vertex texture format supported - PF_A1R5G5B5
+12:08:06: D3D9: Vertex texture format supported - PF_A8R8G8B8
+12:08:06: D3D9: Vertex texture format supported - PF_B8G8R8A8
+12:08:06: D3D9: Vertex texture format supported - PF_A2R10G10B10
+12:08:06: D3D9: Vertex texture format supported - PF_DXT1
+12:08:06: D3D9: Vertex texture format supported - PF_DXT2
+12:08:06: D3D9: Vertex texture format supported - PF_DXT3
+12:08:06: D3D9: Vertex texture format supported - PF_DXT4
+12:08:06: D3D9: Vertex texture format supported - PF_DXT5
+12:08:06: D3D9: Vertex texture format supported - PF_FLOAT16_RGB
+12:08:06: D3D9: Vertex texture format supported - PF_FLOAT16_RGBA
+12:08:06: D3D9: Vertex texture format supported - PF_FLOAT32_RGB
+12:08:06: D3D9: Vertex texture format supported - PF_FLOAT32_RGBA
+12:08:06: D3D9: Vertex texture format supported - PF_X8R8G8B8
+12:08:06: D3D9: Vertex texture format supported - PF_R8G8B8A8
+12:08:06: D3D9: Vertex texture format supported - PF_DEPTH
+12:08:06: D3D9: Vertex texture format supported - PF_SHORT_RGBA
+12:08:06: D3D9: Vertex texture format supported - PF_FLOAT16_R
+12:08:06: D3D9: Vertex texture format supported - PF_FLOAT32_R
+12:08:06: D3D9: Vertex texture format supported - PF_SHORT_GR
+12:08:06: D3D9: Vertex texture format supported - PF_FLOAT16_GR
+12:08:06: D3D9: Vertex texture format supported - PF_FLOAT32_GR
+12:08:06: D3D9: Vertex texture format supported - PF_SHORT_RGB
+12:08:06: D3D9: Vertex texture format supported - PF_PVRTC_RGB2
+12:08:06: D3D9: Vertex texture format supported - PF_PVRTC_RGBA2
+12:08:06: D3D9: Vertex texture format supported - PF_PVRTC_RGB4
+12:08:06: D3D9: Vertex texture format supported - PF_PVRTC_RGBA4
+12:08:06: RenderSystem capabilities
+12:08:06: -------------------------
+12:08:06: RenderSystem Name: Direct3D9 Rendering Subsystem
+12:08:06: GPU Vendor: intel
+12:08:06: Device Name: Monitor-1-Intel(R)  G35 Express Chipset Family (Microsoft Corporation - WDDM 1.1)
+12:08:06: Driver Version: 8.15.10.1749
+12:08:06:  * Fixed function pipeline: yes
+12:08:06:  * Hardware generation of mipmaps: yes
+12:08:06:  * Texture blending: yes
+12:08:06:  * Anisotropic texture filtering: yes
+12:08:06:  * Dot product texture operation: yes
+12:08:06:  * Cube mapping: yes
+12:08:06:  * Hardware stencil buffer: yes
+12:08:06:    - Stencil depth: 8
+12:08:06:    - Two sided stencil support: yes
+12:08:06:    - Wrap stencil values: yes
+12:08:06:  * Hardware vertex / index buffers: yes
+12:08:06:  * Vertex programs: yes
+12:08:06:  * Number of floating-point constants for vertex programs: 256
+12:08:06:  * Number of integer constants for vertex programs: 16
+12:08:06:  * Number of boolean constants for vertex programs: 16
+12:08:06:  * Fragment programs: yes
+12:08:06:  * Number of floating-point constants for fragment programs: 224
+12:08:06:  * Number of integer constants for fragment programs: 16
+12:08:06:  * Number of boolean constants for fragment programs: 16
+12:08:06:  * Geometry programs: no
+12:08:06:  * Number of floating-point constants for geometry programs: 0
+12:08:06:  * Number of integer constants for geometry programs: 0
+12:08:06:  * Number of boolean constants for geometry programs: 0
+12:08:06:  * Supported Shader Profiles: hlsl ps_1_1 ps_1_2 ps_1_3 ps_1_4 ps_2_0 ps_2_a ps_2_b ps_2_x ps_3_0 vs_1_1 vs_2_0 vs_2_a vs_2_x vs_3_0
+12:08:06:  * Texture Compression: yes
+12:08:06:    - DXT: yes
+12:08:06:    - VTC: no
+12:08:06:    - PVRTC: no
+12:08:06:  * Scissor Rectangle: yes
+12:08:06:  * Hardware Occlusion Query: yes
+12:08:06:  * User clip planes: yes
+12:08:06:  * VET_UBYTE4 vertex element type: yes
+12:08:07:  * Infinite far plane projection: yes
+12:08:07:  * Hardware render-to-texture: yes
+12:08:07:  * Floating point textures: yes
+12:08:07:  * Non-power-of-two textures: yes (limited)
+12:08:07:  * Volume textures: yes
+12:08:07:  * Multiple Render Targets: 4
+12:08:07:    - With different bit depths: yes
+12:08:07:  * Point Sprites: yes
+12:08:07:  * Extended point parameters: yes
+12:08:07:  * Max Point Size: 10
+12:08:07:  * Vertex texture fetch: yes
+12:08:07:  * Number of world matrices: 0
+12:08:07:  * Number of texture units: 8
+12:08:07:  * Stencil buffer depth: 8
+12:08:07:  * Number of vertex blend matrices: 0
+12:08:07:    - Max vertex textures: 4
+12:08:07:    - Vertex textures shared: no
+12:08:07:  * Render to Vertex Buffer : no
+12:08:07:  * DirectX per stage constants: yes
+12:08:07: DefaultWorkQueue('Root') initialising on thread 003C0550.
+12:08:07: Particle Renderer Type 'billboard' registered
+12:08:07: DefaultWorkQueue('Root')::WorkerFunc - thread 003AF898 starting.
+12:08:07: DefaultWorkQueue('Root')::WorkerFunc - thread 003AF868 starting.
+12:08:07: SceneManagerFactory for type 'BspSceneManager' registered.
+12:08:07: Registering ResourceManager for type BspLevel
+12:08:07: SceneManagerFactory for type 'OctreeSceneManager' registered.
+12:08:07: SceneManagerFactory for type 'TerrainSceneManager' registered.
+12:08:07: PCZone Factory Type 'ZoneType_Octree' registered
+12:08:07: PCZone Factory Type 'ZoneType_Terrain' registered
+12:08:07: SceneManagerFactory for type 'PCZSceneManager' registered.
+12:08:07: MovableObjectFactory for type 'PCZLight' registered.
+12:08:07: MovableObjectFactory for type 'Portal' registered.
+12:08:07: MovableObjectFactory for type 'AntiPortal' registered.
+12:08:07: Creating resource group Bootstrap
+12:08:07: Added resource location 'Media/packs/OgreCore.zip' of type 'Zip' to resource group 'Bootstrap'
+12:08:07: Added resource location 'Media' of type 'FileSystem' to resource group 'General'
+12:08:07: Added resource location 'Media/Materials/Scripts' of type 'FileSystem' to resource group 'General'
+12:08:07: Added resource location 'Media/Materials/Textures' of type 'FileSystem' to resource group 'General'
+12:08:07: Added resource location 'Media/Models' of type 'FileSystem' to resource group 'General'
+12:08:07: Added resource location 'Media/Packs' of type 'FileSystem' to resource group 'General'
+12:08:07: Added resource location 'Media_extra' of type 'FileSystem' to resource group 'General'
+12:08:07: Parsing scripts for resource group Autodetect
+12:08:07: Finished parsing scripts for resource group Autodetect
+12:08:07: Parsing scripts for resource group Bootstrap
+12:08:07: Parsing script OgreCore.material
+12:08:07: Parsing script OgreProfiler.material
+12:08:07: Parsing script Ogre.fontdef
+12:08:07: Parsing script OgreDebugPanel.overlay
+12:08:07: Texture: New_Ogre_Border_Center.png: Loading 1 faces(PF_A8R8G8B8,256x128x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x128x1.
+12:08:07: Texture: New_Ogre_Border.png: Loading 1 faces(PF_A8R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x256x1.
+12:08:07: Texture: New_Ogre_Border_Break.png: Loading 1 faces(PF_A8R8G8B8,32x32x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,32x32x1.
+12:08:07: Texture: ogretext.png: Loading 1 faces(PF_A8R8G8B8,256x128x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x128x1.
+12:08:07: Parsing script OgreLoadingPanel.overlay
+12:08:07: Finished parsing scripts for resource group Bootstrap
+12:08:07: Parsing scripts for resource group General
+12:08:07: Parsing script BlackAndWhite.material
+12:08:07: Compiler error: reference to a non existing object in BlackAndWhite.material(17)
+12:08:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource GrayScale.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: High-level program Ogre/Compositor/B&W_FP encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource GrayScale.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: Parsing script Example-Water.material
+12:08:07: Parsing script Example.material
+12:08:07: Compiler error: reference to a non existing object in Example.material(211)
+12:08:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource hdr.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: High-level program Examples/MorningSkyBoxHDRfp encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource hdr.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource hdr.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: High-level program Examples/MorningCubeMapHDRfp encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource hdr.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: Compiler error: reference to a non existing object in Example.material(711)
+12:08:07: Compiler error: reference to a non existing object in Example.material(723)
+12:08:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Grass.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: High-level program Examples/GrassWaverVp encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Grass.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: Compiler error: reference to a non existing object in Example.material(858)
+12:08:07: Compiler error: reference to a non existing object in Example.material(893)
+12:08:07: Compiler error: reference to a non existing object in Example.material(1001)
+12:08:07: Compiler error: reference to a non existing object in Example.material(1013)
+12:08:07: Parsing script Examples-Advanced.material
+12:08:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_CelShading.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: High-level program Ogre/CelShadingVP encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_CelShading.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at .\src\OgreGpuProgramParams.cpp (line 1423)
+12:08:07: Compiler error: invalid parameters in Examples-Advanced.material(12): setting of constant failed
+12:08:07: OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at .\src\OgreGpuProgramParams.cpp (line 1423)
+12:08:07: Compiler error: invalid parameters in Examples-Advanced.material(13): setting of constant failed
+12:08:07: OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at .\src\OgreGpuProgramParams.cpp (line 1423)
+12:08:07: Compiler error: invalid parameters in Examples-Advanced.material(14): setting of constant failed
+12:08:07: OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at .\src\OgreGpuProgramParams.cpp (line 1423)
+12:08:07: Compiler error: invalid parameters in Examples-Advanced.material(15): setting of constant failed
+12:08:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_CelShading.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: High-level program Ogre/CelShadingFP encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_CelShading.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_BumpMapping.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: High-level program Examples/BumpMapVP encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_BumpMapping.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_BumpMapping.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: High-level program Examples/BumpMapFP encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_BumpMapping.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: Compiler error: reference to a non existing object in Examples-Advanced.material(229)
+12:08:07: Compiler error: reference to a non existing object in Examples-Advanced.material(288)
+12:08:07: Compiler error: reference to a non existing object in Examples-Advanced.material(319)
+12:08:07: Compiler error: reference to a non existing object in Examples-Advanced.material(371)
+12:08:07: Compiler error: reference to a non existing object in Examples-Advanced.material(407)
+12:08:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_BumpMapping.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: High-level program Examples/BumpMapVPSpecular encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_BumpMapping.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_BumpMapping.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: High-level program Examples/BumpMapFPSpecular encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_BumpMapping.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: Compiler error: reference to a non existing object in Examples-Advanced.material(472)
+12:08:07: Compiler error: reference to a non existing object in Examples-Advanced.material(503)
+12:08:07: Compiler error: reference to a non existing object in Examples-Advanced.material(555)
+12:08:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_Projection.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: High-level program Examples/TexProjectionVP encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_Projection.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_Projection.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: High-level program Examples/TexProjectionFP encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_Projection.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_Fresnel.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: High-level program Examples/FresnelRefractReflectVP encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_Fresnel.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_Fresnel.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: High-level program Examples/FresnelRefractReflectFP encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_Fresnel.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: Compiler error: reference to a non existing object in Examples-Advanced.material(785)
+12:08:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_BumpMapping.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: High-level program Examples/BumpMapVPShadowRcv encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_BumpMapping.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_BumpMapping.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: High-level program Examples/BumpMapFPShadowRcv encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Example_BumpMapping.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: Compiler error: reference to a non existing object in Examples-Advanced.material(858)
+12:08:08: Compiler error: reference to a non existing object in Examples-Advanced.material(889)
+12:08:08: Compiler error: reference to a non existing object in Examples-Advanced.material(941)
+12:08:08: Compiler error: reference to a non existing object in Examples-Advanced.material(998)
+12:08:08: Compiler error: reference to a non existing object in Examples-Advanced.material(1063)
+12:08:08: Compiler error: reference to a non existing object in Examples-Advanced.material(1094)
+12:08:08: Compiler error: reference to a non existing object in Examples-Advanced.material(1146)
+12:08:08: Parsing script Glass.material
+12:08:08: Compiler error: reference to a non existing object in Glass.material(16)
+12:08:08: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource GlassFP.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: High-level program Ogre/Compositor/GlassFP encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource GlassFP.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: Parsing script HeatVision.material
+12:08:08: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource HeatVision.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: High-level program Fury/HeatVision/HeatCaster_vp encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource HeatVision.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource HeatVision.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: High-level program Fury/HeatVision/HeatCaster_fp encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource HeatVision.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource HeatVision.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: High-level program Fury/HeatVision/ColdCaster_vp encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource HeatVision.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource HeatVision.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: High-level program Fury/HeatVision/ColdCaster_fp encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource HeatVision.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource HeatVision.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: High-level program Fury/HeatVision/LightToHeat_vp encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource HeatVision.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at .\src\OgreGpuProgramParams.cpp (line 1423)
+12:08:08: Compiler error: invalid parameters in HeatVision.material(90): setting of constant failed
+12:08:08: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource HeatVision.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: High-level program Fury/HeatVision/LightToHeat_fp encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource HeatVision.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource HeatVision.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: High-level program Fury/HeatVision/Blur_vp encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource HeatVision.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at .\src\OgreGpuProgramParams.cpp (line 1423)
+12:08:08: Compiler error: invalid parameters in HeatVision.material(168): setting of constant failed
+12:08:08: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource HeatVision.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: High-level program Fury/HeatVision/Blur_fp encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource HeatVision.cg in resource group General or any other group. in ResourceGroupManager::openResource at .\src\OgreResourceGroupManager.cpp (line 753)
+12:08:08: Parsing script SCG_build0_base.material
+12:08:08: Parsing script SCG_build0_roof_base.material
+12:08:08: Parsing script SCG_build1_base.material
+12:08:08: Parsing script SCG_build1_roof_base.material
+12:08:08: Parsing script SCG_ter.material
+12:08:08: Finished parsing scripts for resource group General
+12:08:08: Parsing scripts for resource group Internal
+12:08:08: Finished parsing scripts for resource group Internal
+12:08:08: D3D9 : ***** Dimensions altered by the render system
+12:08:08: D3D9 : ***** Source image dimensions : 15x15
+12:08:08: D3D9 : ***** Texture dimensions : 16x16
+12:08:08: Texture: target.png: Loading 1 faces(PF_A8R8G8B8,15x15x1) with 4 generated mipmaps from Image. Internal format is PF_A8R8G8B8,16x16x1.
+12:08:08: Texture: spot_shadow_fade.png: Loading 1 faces(PF_R8G8B8,128x128x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,128x128x1.
+12:08:10: Mesh: Loading sphere.mesh.
+12:08:10: WARNING: sphere.mesh is an older format ([MeshSerializer_v1.30]); you should upgrade it as soon as possible using the OgreMeshUpgrade tool.
+12:08:10: Texture: dkred.png: Loading 1 faces(PF_R8G8B8,16x16x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,16x16x1.
+12:08:12: Mesh: Loading cube.mesh.
+12:08:12: WARNING: cube.mesh is an older format ([MeshSerializer_v1.30]); you should upgrade it as soon as possible using the OgreMeshUpgrade tool.
+12:08:12: Can't assign material 1 - Default to SubEntity of cube0 because this Material does not exist. Have you forgotten to define it in a .material script?
+12:08:12: Texture: dkyellow.png: Loading 1 faces(PF_R8G8B8,16x16x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,16x16x1.
+12:08:44: Can't assign material 1 - Default to SubEntity of cube1 because this Material does not exist. Have you forgotten to define it in a .material script?
+12:08:58: Can't assign material 1 - Default to SubEntity of cube2 because this Material does not exist. Have you forgotten to define it in a .material script?
+12:09:39: DefaultWorkQueue('Root') shutting down on thread 003C0550.
+12:09:39: DefaultWorkQueue('Root')::WorkerFunc - thread 003AF868 stopped.
+12:09:39: DefaultWorkQueue('Root')::WorkerFunc - thread 003AF898 stopped.
+12:09:39: PCZone Factory Type 'ZoneType_Octree' unregistered
+12:09:39: PCZone Factory Type 'ZoneType_Terrain' unregistered
+12:09:39: Unregistering ResourceManager for type BspLevel
+12:09:39: *-*-* OGRE Shutdown
+12:09:39: Unregistering ResourceManager for type Compositor
+12:09:39: Unregistering ResourceManager for type Font
+12:09:39: Unregistering ResourceManager for type Skeleton
+12:09:39: Unregistering ResourceManager for type Mesh
+12:09:39: Unregistering ResourceManager for type HighLevelGpuProgram
+12:09:39: Uninstalling plugin: Portal Connected Zone Scene Manager
+12:09:39: Plugin successfully uninstalled
+12:09:39: Unloading library Plugins\Plugin_PCZSceneManager.dll
+12:09:39: Uninstalling plugin: Octree Zone Factory
+12:09:39: Plugin successfully uninstalled
+12:09:39: Unloading library Plugins\Plugin_OctreeZone.dll
+12:09:39: Uninstalling plugin: Cg Program Manager
+12:09:39: Plugin successfully uninstalled
+12:09:39: Unloading library Plugins\Plugin_CgProgramManager.dll
+12:09:39: Uninstalling plugin: Octree & Terrain Scene Manager
+12:09:39: Plugin successfully uninstalled
+12:09:39: Unloading library Plugins\Plugin_OctreeSceneManager.dll
+12:09:39: Uninstalling plugin: BSP Scene Manager
+12:09:39: Plugin successfully uninstalled
+12:09:39: Unloading library Plugins\Plugin_BSPSceneManager.dll
+12:09:39: Uninstalling plugin: ParticleFX
+12:09:39: Plugin successfully uninstalled
+12:09:39: Unloading library Plugins\Plugin_ParticleFX.dll
+12:09:39: Uninstalling plugin: D3D9 RenderSystem
+12:09:39: D3D9 : Shutting down cleanly.
+12:09:39: Unregistering ResourceManager for type Texture
+12:09:39: Unregistering ResourceManager for type GpuProgram
+12:09:39: D3D9 : Direct3D9 Rendering Subsystem destroyed.
+12:09:39: Plugin successfully uninstalled
+12:09:39: Unloading library Plugins\RenderSystem_Direct3D9.dll
+12:09:39: Uninstalling plugin: GL RenderSystem
+12:09:39: *** Stopping Win32GL Subsystem ***
+12:09:39: Plugin successfully uninstalled
+12:09:39: Unloading library Plugins\RenderSystem_GL.dll
+12:09:39: Unregistering ResourceManager for type Material
+>>>>>>> e4bcc604bcaaabb5998054d57eb205a341a29060
